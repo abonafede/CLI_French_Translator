@@ -1,9 +1,0 @@
-torch
-transformers
-sentencepiece
-sacremoses
-pylint
-pytest
-black
-setuptools
-click

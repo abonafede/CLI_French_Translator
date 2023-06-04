@@ -7,10 +7,10 @@ def test():
     runner = CliRunner()
     result = runner.invoke(translate, ["--text", "my name is andrew"])
     assert result.exit_code == 0
-    assert "mon" in result.output
-    assert "nom" in result.output
-    assert "est" in result.output
-    assert "andrew" in result.output
+    assert "Mon" in result.output.strip()
+    assert "nom" in result.output.strip()
+    assert "est" in result.output.strip()
+    assert "Andrew" in result.output.strip()
 
 if __name__ == '__main__':
     test()

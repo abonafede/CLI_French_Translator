@@ -10,6 +10,6 @@ format:
 	black translator.py translator_test.py
 
 test:
-	python3 -m pytest -vv --cov=translator_test.py
+	python3 -m pytest -vv translator_test.py
 
 all: setup lint format test

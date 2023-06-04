@@ -1,0 +1,2 @@
+[console_scripts]
+En_to_Fr = translator:main

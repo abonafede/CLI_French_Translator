@@ -1,12 +1,11 @@
-import click
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import warnings
+import logging
 
+logging.disable(logging.WARNING)
 warnings.filterwarnings("ignore")
 
-@click.command()
-@click.option("--text")
-def translate(text) -> str:
+def translate() -> str:
     translate_input = input("Phrase in English: ")
     tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-fr")
     model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-fr")

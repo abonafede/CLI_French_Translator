@@ -7,7 +7,7 @@ logging.disable(logging.WARNING)
 warnings.filterwarnings("ignore")
 
 @click.command()
-@click.option("--text",prompt="English Phrase")
+@click.option("--text", required=True, prompt="English Phrase")
 def translate(text):
     tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-fr")
     model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-fr")
@@ -17,4 +17,5 @@ def translate(text):
     click.echo(f"French Phrase: {decoded}")
 
 if __name__ == '__main__':
+    # pylint: disable=no-value-for-parameter
     translate()

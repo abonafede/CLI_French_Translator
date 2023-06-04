@@ -1,1 +1,1 @@
-# CLI_French_Translator
+# CLI French to English Translator
